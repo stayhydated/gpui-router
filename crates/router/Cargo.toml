@@ -26,14 +26,13 @@ smallvec.workspace = true
 
 [dev-dependencies]
 gpui = { workspace = true, features = ["test-support"] }
+gpui_platform = { workspace = true, features = ["font-kit", "x11", "wayland", "runtime_shaders"] }
 
 [features]
 default = ["font-kit", "wayland", "x11"]
 test-support = ["gpui/test-support"]
 inspector = ["gpui/inspector"]
 leak-detection = ["gpui/leak-detection"]
-runtime_shaders = ["gpui/runtime_shaders"]
-macos-blade = ["gpui/macos-blade"]
 wayland = ["gpui/wayland"]
 x11 = ["gpui/x11"]
 font-kit = ["gpui/font-kit"]

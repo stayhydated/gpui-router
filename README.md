@@ -69,7 +69,8 @@ fn not_match() -> impl IntoElement {
 }
 
 fn main() {
-  Application::new().run(|cx: &mut App| {
+  let app = gpui_platform::application();
+  app.run(|cx: &mut App| {
     router_init(cx);
     cx.activate(true);
     cx.open_window(WindowOptions::default(), |_, cx| cx.new(|_cx| HelloWorld {}))
